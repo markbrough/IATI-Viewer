@@ -24,7 +24,7 @@
 				<% }); %>
 			</p>
 			<h2>Stats:</h2>
-			<table class="table">
+			<table class="table table-bordered">
 				<% _.each(stats, function(stat) { %>
 					<tr>
 						<th><%=stat.name%></th>
@@ -37,6 +37,8 @@
 		<script src="vendor/jquery.js"></script>
 		<script src="vendor/lodash.js"></script>
 		<script src="vendor/backbone.js"></script>
+
+		<script src="http://code.highcharts.com/highcharts.js"></script>
 
 		<script data-main="js/main.js" src="vendor/require.js"></script>
 
