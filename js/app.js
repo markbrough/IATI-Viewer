@@ -8,6 +8,9 @@
 		'select * from json where url = "$iatiUrl"'
 	);
 
+	var app = {
+
+	};
 
 	$.ajax({
 		type: 'GET',
@@ -15,7 +18,7 @@
 		dataType: 'jsonp',
 		data: {
 			q: QUERY({
-				iatiUrl: 'http://iati-datastore.herokuapp.com/api/1/access/activity?reporting-org=46002&limit=1'
+				iatiUrl: 'http://iati-datastore.herokuapp.com/api/1/access/activity?reporting-org=47045&limit=2'
 			}),
 			format: 'json',
 			diagnostics: true,
