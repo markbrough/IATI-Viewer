@@ -29,7 +29,7 @@ define(function(require) {
 			this.$el.html( template({
 				title: this.activity.title ? this.activity.title.content : '[no title]',
 				description: this.activity.description ? this.activity.description.content : '[no description]',
-				iati_identifier: this.activity["iati-identifier"].content,
+				iati_identifier: this.activity["iati-identifier"],
 				participatingOrgs: this.activity['participating-org'],
 				stats: [
 					{
