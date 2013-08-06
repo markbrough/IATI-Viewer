@@ -15,7 +15,7 @@
 		dataType: 'jsonp',
 		data: {
 			q: QUERY({
-				iatiUrl: 'http://iati-datastore.herokuapp.com/api/1/access/activity?reporting-org=GB-1&recipient-country=CD'
+				iatiUrl: 'http://iati-datastore.herokuapp.com/api/1/access/activity?reporting-org=46002&limit=1'
 			}),
 			format: 'json',
 			diagnostics: true,
