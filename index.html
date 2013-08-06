@@ -6,33 +6,35 @@
 		<title>IATI Viewer</title>
 		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
 		<link href="main.css" rel="stylesheet" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
+		<div class="content">
+			<form>
+				<!-- Form ? -->
+			</form>
 
-		<form>
-			<!-- Form ? -->
-		</form>
+			<div id="report"></div>
 
-		<div id="report"></div>
-
-		<script id="reportTemplate" type="template">
-			<h1><%=title%></h1>
-			<p><%=description%></p>
-			<p>
-				<% _.each(participatingOrgs, function(po) { %>
-					→ <%= po.content %> ( <em> Role: <%= po.role %> </em> ) <br/>
-				<% }); %>
-			</p>
-			<h2>Stats:</h2>
-			<table class="table table-bordered">
-				<% _.each(stats, function(stat) { %>
-					<tr>
-						<th><%=stat.name%></th>
-						<td><%=stat.value%></th>
-					</tr>
-				<% }); %>
-			</table>
-		</script>
+			<script id="reportTemplate" type="template">
+				<h1><%=title%></h1>
+				<p><%=description%></p>
+				<p>
+					<% _.each(participatingOrgs, function(po) { %>
+						→ <%= po.content %> ( <em> Role: <%= po.role %> </em> ) <br/>
+					<% }); %>
+				</p>
+				<h2>Stats:</h2>
+				<table class="table table-bordered">
+					<% _.each(stats, function(stat) { %>
+						<tr>
+							<th><%=stat.name%></th>
+							<td><%=stat.value%></th>
+						</tr>
+					<% }); %>
+				</table>
+			</script>
+		</div>
 
 		<script src="vendor/jquery.js"></script>
 		<script src="vendor/lodash.js"></script>
