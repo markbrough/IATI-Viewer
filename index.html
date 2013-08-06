@@ -4,6 +4,8 @@
 	<head>
 		<meta charset="utf8" />
 		<title>Query IATA</title>
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+		<link href="main.css" rel="stylesheet" />
 	</head>
 	<body>
 
@@ -11,11 +13,26 @@
 			<!-- Form ? -->
 		</form>
 
-		<script src="js/jquery.js"></script>
-		<script src="js/lodash.js"></script>
+		<div id="report"></div>
 
-		<script src="js/util.js"></script>
-		<script src="js/app.js"></script>
+		<script id="reportTemplate" type="template">
+			<h1><%=title%></h1>
+			<h2>Stats</h2>
+			<table class="table">
+				<% _.each(stats, function(stat) { %>
+					<tr>
+						<th><%=stat.name%></th>
+						<td><%=stat.value%></th>
+					</tr>
+				<% }); %>
+			</table>
+		</script>
+
+		<script src="vendor/jquery.js"></script>
+		<script src="vendor/lodash.js"></script>
+		<script src="vendor/backbone.js"></script>
+
+		<script data-main="js/main.js" src="vendor/require.js"></script>
 
 	</body>
 </html>
