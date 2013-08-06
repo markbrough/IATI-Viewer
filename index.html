@@ -17,7 +17,13 @@
 
 		<script id="reportTemplate" type="template">
 			<h1><%=title%></h1>
-			<h2>Stats</h2>
+			<p><%=description%></p>
+			<p>
+				<% _.each(participatingOrgs, function(po) { %>
+					→ <%= po.content %> ( <em> Role: <%= po.role %> </em> ) <br/>
+				<% }); %>
+			</p>
+			<h2>Stats:</h2>
 			<table class="table">
 				<% _.each(stats, function(stat) { %>
 					<tr>
