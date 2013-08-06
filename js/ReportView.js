@@ -27,8 +27,9 @@ define(function(require) {
 
 		render: function() {
 			this.$el.html( template({
-				title: this.activity.title.content,
+				title: this.activity.title ? this.activity.title.content : '[no title]',
 				description: this.activity.description ? this.activity.description.content : '[no description]',
+				iati_identifier: this.activity["iati-identifier"].content,
 				participatingOrgs: this.activity['participating-org'],
 				stats: [
 					{
