@@ -107,7 +107,8 @@ define(function(require) {
 				xAxis: {
 					categories: years
 				},
-				series: [{
+				series: [
+                /*{
 					data: totals,
 					step: 'tt',
 					name: 'Total transactions'
@@ -115,10 +116,11 @@ define(function(require) {
 					data: commitmentTransactions,
 					step: 'ct',
 					name: 'Commitment transactions'
-				}, {
+				}, */
+                {
 					data: disbursementTransactions,
 					step: 'dt',
-					name: 'Disbursement transactions'
+					name: 'Disbursements'
 				}]
 
 			});
