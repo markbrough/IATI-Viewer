@@ -55,6 +55,7 @@ define(function(require) {
 		},
         update: function (args){
             $('#report').empty();
+			$('#loading').slideDown();
             this.init(args);
         }
 	};
