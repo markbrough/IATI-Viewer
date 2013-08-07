@@ -34,7 +34,7 @@ define(function(require) {
 				});
 
 				$('#report').html( rv.$el );
-				$('#loading').fadeOut();
+				$('#loading').slideUp();
 
 			});
 
