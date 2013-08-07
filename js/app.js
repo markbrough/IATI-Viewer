@@ -52,6 +52,8 @@ define(function(require) {
 
 			});
 
+            $("#csv_download").attr('href', 'http://iati-datastore.herokuapp.com/api/1/access/activity.csv?limit=1000'+reporting_org+recipient_country+offset);
+
 		},
         update: function (args){
             $('#report').empty();
