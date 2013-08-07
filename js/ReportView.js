@@ -48,9 +48,9 @@ define(function(require) {
 							return t['transaction-type'].code === 'C'
 						})) + ' ' + this.getCurrency() 
 					}
-				]
+				],
+                results: this.getResults()
 			}) );
-
 			this.doTransactionChart();
 		},
 
@@ -74,6 +74,29 @@ define(function(require) {
 			}
 			return 'UNKNOWN';
 		},
+        getResults: function(){
+            var out = new Array();
+            var bar_width = 100;
+            var results = this.activity.result;
+            $.each(results, function(key, result){
+                var actual_val = result.indicator.period.actual.value.replace(",","");
+                var target_val = result.indicator.period.target.value.replace(",","");
+                var percentage = actual_val/target_val;
+                if (percentage > 1) {
+                    percentage = 1;
+                }
+                var num_pixels = percentage * bar_width;
+                if (parseInt(num_pixels)){                     
+                    out.push({
+                    'title': result.indicator.title,
+                    'value': num_pixels
+                    })
+                }
+
+            });
+            console.warn(out);
+            return out;
+        },
 
 		doTransactionChart: function() {
 

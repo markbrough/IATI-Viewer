@@ -64,8 +64,21 @@
 				<table class="table table-bordered">
 					<% _.each(stats, function(stat) { %>
 						<tr>
-							<th><%=stat.name%></th>
-							<td><%=stat.value%></th>
+							<td><%=stat.name%></td>
+							<td><%=stat.value%></td>
+						</tr>
+					<% }); %>
+				</table>
+				<h2>Results:</h2>
+				<table class="table table-bordered">
+					<% _.each(results, function(result) { %>
+						<tr>
+							<td><%=result.title%></td>
+							<td>
+                              <div class="progress">
+                                <div class="progress-bar" style="width: <%=result.value%>;"></div>
+                              </div>
+                            </td>
 						</tr>
 					<% }); %>
 				</table>
