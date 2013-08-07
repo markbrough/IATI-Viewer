@@ -11,15 +11,29 @@ define(function(require) {
 	);
 
 	return {
-		init: function() {
-
+		init: function(args) {
+            if (args.offset >0) {
+                var offset = '&offset='+args.offset;
+            } else {
+                var offset = '';
+            }
+            if ((typeof args.reporting_org != "undefined")&&(args.reporting_org!="")) {
+                var reporting_org = '&reporting-org='+args.reporting_org;
+            } else {
+                var reporting_org = ''
+            }
+            if ((typeof args.recipient_country != "undefined")&&(args.recipient_country!="")) {
+                var recipient_country = '&recipient-country='+args.recipient_country;
+            } else {
+                var recipient_country = ''
+            }
 			$.ajax({
 				type: 'GET',
 				url: YQL_URI,
 				dataType: 'jsonp',
 				data: {
 					q: QUERY({
-						iatiUrl: 'http://iati-datastore.herokuapp.com/api/1/access/activity.xml?reporting-org=47045&limit=2'
+						iatiUrl: 'http://iati-datastore.herokuapp.com/api/1/access/activity.xml?limit=2'+reporting_org+recipient_country+offset
 					}),
 					format: 'json',
 					diagnostics: true,
@@ -38,7 +52,11 @@ define(function(require) {
 
 			});
 
-		}
+		},
+        update: function (args){
+            $('#report').empty();
+            this.init(args);
+        }
 	};
 
 });

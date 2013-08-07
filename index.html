@@ -15,6 +15,7 @@
 			<a class="navbar-brand" href="#"><b>IATI Viewer</b></a>
 			<div class="nav-collapse collapse">
 			  <ul class="nav navbar-nav">
+                <!--
 				<li>
 				  <a href="#allprojects">All Projects</a>
 				</li>
@@ -22,18 +23,413 @@
 				  <a href="#project">Project</a>
 				</li>
 				<li>
-				  <a href="#previous">&laquo; Previous</a>
-				</li>
+				  <a href="#previous" id="previous">&laquo; Previous</a>
+				</li>-->
 				<li>
-				  <a href="#next">Next &raquo;</a>
+				  <a href="#next" id="next" data-page="0">Next &raquo;</a>
 				</li>
+                <li>
+                  <form class="navbar-form">
+                        <select id="reporting-org" class="form-control" style="width: 200px;" name="reporting-org">
+                            <option value="">Filter by reporting org</option>
+                            <option value="GB-CHC-283302">ACORD : GB-CHC-283302</option>
+                            <option value="GB-COH-294860">ADD International : GB-COH-294860</option>
+                            <option value="GB-CHC-1074937">ADRA-UK : GB-CHC-1074937</option>
+                            <option value="GB-CHC-290836">APT Action on Poverty : GB-CHC-290836</option>
+                            <option value="NL-KVK-27264198">ActionAid International : NL-KVK-27264198</option>
+                            <option value="gb-chc-1093624">AfriKids : gb-chc-1093624</option>
+                            <option value="GB-CHC-313139">Africa Educational Trust : GB-CHC-313139</option>
+                            <option value="GB-CHC-1064413">African Initiatives : GB-CHC-1064413</option>
+                            <option value="GB-COH-1100897">Aga Khan Foundation (United Kingdom) : GB-COH-1100897</option>
+                            <option value="GB-CHC-327421">Article 19 : GB-CHC-327421</option>
+                            <option value="46004">Asian Development Bank : 46004</option>
+                            <option value="AU-5">Australian Agency for International Development : AU-5</option>
+                            <option value="DE-1">BMZ : DE-1</option>
+                            <option value="NL-CCI-20081098">BRAC International : NL-CCI-20081098</option>
+                            <option value="GB-CHC-1079599">BasicNeeds : GB-CHC-1079599</option>
+                            <option value="GB-CHC-1068839">Bond : GB-CHC-1068839</option>
+                            <option value="GB-CC-220949">British Red Cross : GB-CC-220949</option>
+                            <option value="GB-CHC-298316">Build Africa : GB-CHC-298316</option>
+                            <option value="GB-CHC-285776">CAFOD : GB-CHC-285776</option>
+                            <option value="GB-CHC-292506">CARE International UK : GB-CHC-292506</option>
+                            <option value="GB-2">CDC Group plc : GB-2</option>
+                            <option value="GB-CHC-1029161">Camfed International : GB-CHC-1029161</option>
+                            <option value="GB-CHC-326568">Charity Projects Ltd (Comic Relief) : GB-CHC-326568</option>
+                            <option value="GB-CHC-328434">ChildHopeUK : GB-CHC-328434</option>
+                            <option value="GB-CHC-1020488">Children in Crisis : GB-CHC-1020488</option>
+                            <option value="GB-CHC-1105851">Christian Aid : GB-CHC-1105851</option>
+                            <option value="GB-CHC-272465">Concern Universal : GB-CHC-272465</option>
+                            <option value="GB-CHC-1092236">Concern Worldwide (UK) : GB-CHC-1092236</option>
+                            <option value="GB-CHC-1055436">Conciliation Resources : GB-CHC-1055436</option>
+                            <option value="DECC">DECC : DECC</option>
+                            <option value="GB-1">Department for International Development : GB-1</option>
+                            <option value="GB-COH-06368740">Development Initiatives Poverty Research : GB-COH-06368740</option>
+                            <option value="CA-CRA-89980-1815-RR0001">Engineers Without Borders Canada : CA-CRA-89980-1815-RR0001</option>
+                            <option value="EU">European Union Institutions : EU</option>
+                            <option value="GB-CC-1089879">EveryChild : GB-CC-1089879</option>
+                            <option value="GB-COH-0277068">Fauna : GB-COH-0277068</option>
+                            <option value="GB-CHC-250456">Find Your Feet : GB-CHC-250456</option>
+                            <option value="GB-COH-3008440">Forests Monitor : GB-COH-3008440</option>
+                            <option value="GB-CHC-281681">Friends of the Earth England, Wales and Northern Ireland : GB-CHC-281681</option>
+                            <option value="ZA-CIPC-2001/005850/08">GENDER LINKS : ZA-CIPC-2001/005850/08</option>
+                            <option value="US-EIN-26-0126537">Global Integrity : US-EIN-26-0126537</option>
+                            <option value="US-EIN-300108263">GlobalGiving : US-EIN-300108263</option>
+                            <option value="NL-KVK-41198677">HIVOS : NL-KVK-41198677</option>
+                            <option value="GB-CHC-1043641">Habitat for Humanity Great Britain : GB-CHC-1043641</option>
+                            <option value="FR-PDR-W691075333">Handicap International : FR-PDR-W691075333</option>
+                            <option value="GB-CHC-1837621">Health Poverty Action : GB-CHC-1837621</option>
+                            <option value="GB-COH-4887855">HealthProm : GB-COH-4887855</option>
+                            <option value="GB-CHC-1017255">Homeless International : GB-CHC-1017255</option>
+                            <option value="GB-CHC-1089490">Hope and Homes for Children : GB-CHC-1089490</option>
+                            <option value="GB-CC-1090745">ICA:UK : GB-CC-1090745</option>
+                            <option value="IADB">Inter-American Development Bank : IADB</option>
+                            <option value="ICN">InterClimate Network : ICN</option>
+                            <option value="GB-CHC-1001698">Interact Worldwide : GB-CHC-1001698</option>
+                            <option value="GB-COH-2153193">International Alert : GB-COH-2153193</option>
+                            <option value="21020">International HIV/AIDS Alliance : 21020</option>
+                            <option value="GB-CHC-21023">International Planned Parenthood Federation : GB-CHC-21023</option>
+                            <option value="GB-CHC-291167">Jeevika Trust (registered as India Development Group) : GB-CHC-291167</option>
+                            <option value="GB-COH-4075590">LEAD International : GB-COH-4075590</option>
+                            <option value="GB-CHC-218186">Leonard Cheshire Disability : GB-CHC-218186</option>
+                            <option value="LIVINGEARTH">Living Earth Foundation : LIVINGEARTH</option>
+                            <option value="GB-CHC-SC030289">MERCY CORPS SCOTLAND : GB-CHC-SC030289</option>
+                            <option value="GB-CHC-1099776">Malaria Consortium : GB-CHC-1099776</option>
+                            <option value="mapaction">MapAction : mapaction</option>
+                            <option value="GB-CHC-291691">Methodist Relief and Development Fund : GB-CHC-291691</option>
+                            <option value="NL-1">Ministry of Foreign Affairs (DGIS) : NL-1</option>
+                            <option value="DK-1">Ministry of Foreign Affairs, Denmark : DK-1</option>
+                            <option value="FI-3">Ministry of Foreign Affairs, Finland : FI-3</option>
+                            <option value="NO-BRC-977538319">Norwegian Refugee Council : NO-BRC-977538319</option>
+                            <option value="GB-COH-05322719">Opportunity International : GB-COH-05322719</option>
+                            <option value="SE-99">Other Department : SE-99</option>
+                            <option value="GB-CHC-202918">Oxfam GB : GB-CHC-202918</option>
+                            <option value="GB-COH-04154075">PENAL REFORM INTERNATIONAL : GB-COH-04154075</option>
+                            <option value="GB-CH-04154075">PENAL REFORM INTERNATIONAL : GB-CH-04154075</option>
+                            <option value="GB-CHC-1125948">PONT : GB-CHC-1125948</option>
+                            <option value="GB_CHC">POWER International : GB_CHC</option>
+                            <option value="GB-CHC-1123241">Peace Direct : GB-CHC-1123241</option>
+                            <option value="GB-COH-1364201">Plan International UK : GB-COH-1364201</option>
+                            <option value="pontis">Pontis Foundation : pontis</option>
+                            <option value="21032">Population Services International : 21032</option>
+                            <option value="GB-COH-871954">Practical Action : GB-COH-871954</option>
+                            <option value="GB-CHC-294329">Progressio : GB-CHC-294329</option>
+                            <option value="CB-COH-07676886">Publish What You Fund : CB-COH-07676886</option>
+                            <option value="GB-CHC-1058991">Railway Children : GB-CHC-1058991</option>
+                            <option value="GB-CHC-1138287">Rainforest Foundation UK : GB-CHC-1138287</option>
+                            <option value="GB-CHC-1098106">Relief International UK : GB-CHC-1098106</option>
+                            <option value="GB-COH-4905100">Resource Extraction Monitoring : GB-COH-4905100</option>
+                            <option value="GB-CHC-1127488">Restless Development : GB-CHC-1127488</option>
+                            <option value="GB-CHC-207076">Royal Society for the Protection of Birds : GB-CHC-207076</option>
+                            <option value="GB-COH-2100867">SOS Sahel International UK : GB-COH-2100867</option>
+                            <option value="GB-CHC-1001349">Samaritan's Purse UK : GB-CHC-1001349</option>
+                            <option value="GB-COH-213890">Save The Children UK : GB-COH-213890</option>
+                            <option value="SCIAF">Scottish Catholic International Aid Fund : SCIAF</option>
+                            <option value="IE-6663">Self Help Africa : IE-6663</option>
+                            <option value="GB-CHC-299717">Send a Cow : GB-CHC-299717</option>
+                            <option value="GB-CHC-1076497">Sense International : GB-CHC-1076497</option>
+                            <option value="GB-CHC-207544">Sightsavers : GB-CHC-207544</option>
+                            <option value="50">Spain : 50</option>
+                            <option value="NL-KVK-41213450">Spark head office Amsterdam : NL-KVK-41213450</option>
+                            <option value="GB-CHC-1065705">Survivors Fund (SURF) : GB-CHC-1065705</option>
+                            <option value="SE-6">Swedish International Development Agency : SE-6</option>
+                            <option value="SE-2">Swedish Ministry of Foreign Affairs : SE-2</option>
+                            <option value="GB-CHC-1071886">TB Alert : GB-CHC-1071886</option>
+                            <option value="GB-CHC-265464">Tearfund : GB-CHC-265464</option>
+                            <option value="US-AGO-941191246">The Asia Foundation : US-AGO-941191246</option>
+                            <option value="47122">The Global Alliance for Vaccination and Immunisation : 47122</option>
+                            <option value="47045">The Global Fund to Fight AIDS, Tuberculosis and Malaria : 47045</option>
+                            <option value="GB-CHC-1075920">The Indigo Trust : GB-CHC-1075920</option>
+                            <option value="GB - CC - 254781">The International Children's Trust : GB - CC - 254781</option>
+                            <option value="US-EIN-941655673">The William and Flora Hewlett Foundation : US-EIN-941655673</option>
+                            <option value="GB-COH-3031674">Traidcraft Exchange : GB-COH-3031674</option>
+                            <option value="21033">Transparency International : 21033</option>
+                            <option value="GB-COH-NI21482">Trocaire (Northern Ireland) : GB-COH-NI21482</option>
+                            <option value="GB-CHC-1069208">Trust for Africa\'s Orphans : GB-CHC-1069208</option>
+                            <option value="twin">Twin : twin</option>
+                            <option value="GB-4">UK Department of Energy and Climate Change : GB-4</option>
+                            <option value="411124">UN Women : 411124</option>
+                            <option value="41120">UN-HABITAT : 41120</option>
+                            <option value="41111">UNCDF : 41111</option>
+                            <option value="41127-FTS">UNOCHA-FTS : 41127-FTS</option>
+                            <option value="41114">United Nations Development Programme : 41114</option>
+                            <option value="41AAA">United Nations Office for Project Services : 41AAA</option>
+                            <option value="GB-CHC-1140123">Vision for a Nation Foundation : GB-CHC-1140123</option>
+                            <option value="GB-CHC-313757">Voluntary Service Overseas (VSO) : GB-CHC-313757</option>
+                            <option value="GB-COH-1081247">WWF-UK : GB-COH-1081247</option>
+                            <option value="GB-CHC-208724">War on Want : GB-CHC-208724</option>
+                            <option value="GB-COH-5419428">Water & Sanitation for the Urban Poor (WSUP) : GB-COH-5419428</option>
+                            <option value="GB-CC-288701">WaterAid : GB-CC-288701</option>
+                            <option value="GBCHC328206">Womankind Worldwide : GBCHC328206</option>
+                            <option value="44000">World Bank Group : 44000</option>
+                            <option value="GB-CHC-285908">World Vision UK : GB-CHC-285908</option>
+                            <option value="21-PK-WWF">World Wide Fund for Nature - Pakistan : 21-PK-WWF</option>
+                            <option value="1109789">Y Care International : 1109789</option>
+                            <option value="NP-CRO-45995/063/064">YoungInnovations Pvt. Ltd. : NP-CRO-45995/063/064</option>
+                            <option value="karuna_admin">karuna Trust : karuna_admin</option>
+                        </select>
+
+                        <select id="recipient-country" class="form-control" style="width: 200px;" name="recipient-country">
+                            <option value="">Filter by recipient country</option>
+                            <option value="AF">AFGHANISTAN</option>
+                            <option value="AX">ALAND ISLANDS</option>
+                            <option value="AL">ALBANIA</option>
+                            <option value="DZ">ALGERIA</option>
+                            <option value="AS">AMERICAN SAMOA</option>
+                            <option value="AD">ANDORRA</option>
+                            <option value="AO">ANGOLA</option>
+                            <option value="AI">ANGUILLA</option>
+                            <option value="AQ">ANTARCTICA</option>
+                            <option value="AG">ANTIGUA AND BARBUDA</option>
+                            <option value="AR">ARGENTINA</option>
+                            <option value="AM">ARMENIA</option>
+                            <option value="AW">ARUBA</option>
+                            <option value="AU">AUSTRALIA</option>
+                            <option value="AT">AUSTRIA</option>
+                            <option value="AZ">AZERBAIJAN</option>
+                            <option value="BS">BAHAMAS</option>
+                            <option value="BH">BAHRAIN</option>
+                            <option value="BD">BANGLADESH</option>
+                            <option value="BB">BARBADOS</option>
+                            <option value="BY">BELARUS</option>
+                            <option value="BE">BELGIUM</option>
+                            <option value="BZ">BELIZE</option>
+                            <option value="BJ">BENIN</option>
+                            <option value="BM">BERMUDA</option>
+                            <option value="BT">BHUTAN</option>
+                            <option value="BO">BOLIVIA, PLURINATIONAL STATE OF</option>
+                            <option value="BQ">BONAIRE, SAINT EUSTATIUS AND SABA</option>
+                            <option value="BA">BOSNIA AND HERZEGOVINA</option>
+                            <option value="BW">BOTSWANA</option>
+                            <option value="BV">BOUVET ISLAND</option>
+                            <option value="BR">BRAZIL</option>
+                            <option value="IO">BRITISH INDIAN OCEAN TERRITORY</option>
+                            <option value="BN">BRUNEI DARUSSALAM</option>
+                            <option value="BG">BULGARIA</option>
+                            <option value="BF">BURKINA FASO</option>
+                            <option value="BI">BURUNDI</option>
+                            <option value="KH">CAMBODIA</option>
+                            <option value="CM">CAMEROON</option>
+                            <option value="CA">CANADA</option>
+                            <option value="CV">CAPE VERDE</option>
+                            <option value="KY">CAYMAN ISLANDS</option>
+                            <option value="CF">CENTRAL AFRICAN REPUBLIC</option>
+                            <option value="TD">CHAD</option>
+                            <option value="CL">CHILE</option>
+                            <option value="CN">CHINA</option>
+                            <option value="CX">CHRISTMAS ISLAND</option>
+                            <option value="CC">COCOS (KEELING) ISLANDS</option>
+                            <option value="CO">COLOMBIA</option>
+                            <option value="KM">COMOROS</option>
+                            <option value="CG">CONGO</option>
+                            <option value="CD">CONGO, THE DEMOCRATIC REPUBLIC OF THE</option>
+                            <option value="CK">COOK ISLANDS</option>
+                            <option value="CR">COSTA RICA</option>
+                            <option value="CI">CÃ”TE D'IVOIRE</option>
+                            <option value="HR">CROATIA</option>
+                            <option value="CU">CUBA</option>
+                            <option value="CW">CURAÃ‡AO</option>
+                            <option value="CY">CYPRUS</option>
+                            <option value="CZ">CZECH REPUBLIC</option>
+                            <option value="DK">DENMARK</option>
+                            <option value="DJ">DJIBOUTI</option>
+                            <option value="DM">DOMINICA</option>
+                            <option value="DO">DOMINICAN REPUBLIC</option>
+                            <option value="EC">ECUADOR</option>
+                            <option value="EG">EGYPT</option>
+                            <option value="SV">EL SALVADOR</option>
+                            <option value="GQ">EQUATORIAL GUINEA</option>
+                            <option value="ER">ERITREA</option>
+                            <option value="EE">ESTONIA</option>
+                            <option value="ET">ETHIOPIA</option>
+                            <option value="FK">FALKLAND ISLANDS (MALVINAS)</option>
+                            <option value="FO">FAROE ISLANDS</option>
+                            <option value="FJ">FIJI</option>
+                            <option value="FI">FINLAND</option>
+                            <option value="FR">FRANCE</option>
+                            <option value="GF">FRENCH GUIANA</option>
+                            <option value="PF">FRENCH POLYNESIA</option>
+                            <option value="TF">FRENCH SOUTHERN TERRITORIES</option>
+                            <option value="GA">GABON</option>
+                            <option value="GM">GAMBIA</option>
+                            <option value="GE">GEORGIA</option>
+                            <option value="DE">GERMANY</option>
+                            <option value="GH">GHANA</option>
+                            <option value="GI">GIBRALTAR</option>
+                            <option value="GR">GREECE</option>
+                            <option value="GL">GREENLAND</option>
+                            <option value="GD">GRENADA</option>
+                            <option value="GP">GUADELOUPE</option>
+                            <option value="GU">GUAM</option>
+                            <option value="GT">GUATEMALA</option>
+                            <option value="GG">GUERNSEY</option>
+                            <option value="GN">GUINEA</option>
+                            <option value="GW">GUINEA-BISSAU</option>
+                            <option value="GY">GUYANA</option>
+                            <option value="HT">HAITI</option>
+                            <option value="HM">HEARD ISLAND AND MCDONALD ISLANDS</option>
+                            <option value="VA">HOLY SEE (VATICAN CITY STATE)</option>
+                            <option value="HN">HONDURAS</option>
+                            <option value="HK">HONG KONG</option>
+                            <option value="HU">HUNGARY</option>
+                            <option value="IS">ICELAND</option>
+                            <option value="IN">INDIA</option>
+                            <option value="ID">INDONESIA</option>
+                            <option value="IR">IRAN, ISLAMIC REPUBLIC OF</option>
+                            <option value="IQ">IRAQ</option>
+                            <option value="IE">IRELAND</option>
+                            <option value="IM">ISLE OF MAN</option>
+                            <option value="IL">ISRAEL</option>
+                            <option value="IT">ITALY</option>
+                            <option value="JM">JAMAICA</option>
+                            <option value="JP">JAPAN</option>
+                            <option value="JE">JERSEY</option>
+                            <option value="JO">JORDAN</option>
+                            <option value="KZ">KAZAKHSTAN</option>
+                            <option value="KE">KENYA</option>
+                            <option value="KI">KIRIBATI</option>
+                            <option value="KP">KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF</option>
+                            <option value="KR">KOREA, REPUBLIC OF</option>
+                            <option value="KW">KUWAIT</option>
+                            <option value="KG">KYRGYZSTAN</option>
+                            <option value="LA">LAO PEOPLE'S DEMOCRATIC REPUBLIC</option>
+                            <option value="LV">LATVIA</option>
+                            <option value="LB">LEBANON</option>
+                            <option value="LS">LESOTHO</option>
+                            <option value="LR">LIBERIA</option>
+                            <option value="LY">LIBYAN ARAB JAMAHIRIYA</option>
+                            <option value="LI">LIECHTENSTEIN</option>
+                            <option value="LT">LITHUANIA</option>
+                            <option value="LU">LUXEMBOURG</option>
+                            <option value="MO">MACAO</option>
+                            <option value="MK">MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</option>
+                            <option value="MG">MADAGASCAR</option>
+                            <option value="MW">MALAWI</option>
+                            <option value="MY">MALAYSIA</option>
+                            <option value="MV">MALDIVES</option>
+                            <option value="ML">MALI</option>
+                            <option value="MT">MALTA</option>
+                            <option value="MH">MARSHALL ISLANDS</option>
+                            <option value="MQ">MARTINIQUE</option>
+                            <option value="MR">MAURITANIA</option>
+                            <option value="MU">MAURITIUS</option>
+                            <option value="YT">MAYOTTE</option>
+                            <option value="MX">MEXICO</option>
+                            <option value="FM">MICRONESIA, FEDERATED STATES OF</option>
+                            <option value="MD">MOLDOVA, REPUBLIC OF</option>
+                            <option value="MC">MONACO</option>
+                            <option value="MN">MONGOLIA</option>
+                            <option value="ME">MONTENEGRO</option>
+                            <option value="MS">MONTSERRAT</option>
+                            <option value="MA">MOROCCO</option>
+                            <option value="MZ">MOZAMBIQUE</option>
+                            <option value="MM">MYANMAR</option>
+                            <option value="NA">NAMIBIA</option>
+                            <option value="NR">NAURU</option>
+                            <option value="NP">NEPAL</option>
+                            <option value="NL">NETHERLANDS</option>
+                            <option value="AN">NETHERLAND ANTILLES</option>
+                            <option value="NC">NEW CALEDONIA</option>
+                            <option value="NZ">NEW ZEALAND</option>
+                            <option value="NI">NICARAGUA</option>
+                            <option value="NE">NIGER</option>
+                            <option value="NG">NIGERIA</option>
+                            <option value="NU">NIUE</option>
+                            <option value="NF">NORFOLK ISLAND</option>
+                            <option value="MP">NORTHERN MARIANA ISLANDS</option>
+                            <option value="NO">NORWAY</option>
+                            <option value="OM">OMAN</option>
+                            <option value="PK">PAKISTAN</option>
+                            <option value="PW">PALAU</option>
+                            <option value="PS">PALESTINIAN TERRITORY, OCCUPIED</option>
+                            <option value="PA">PANAMA</option>
+                            <option value="PG">PAPUA NEW GUINEA</option>
+                            <option value="PY">PARAGUAY</option>
+                            <option value="PE">PERU</option>
+                            <option value="PH">PHILIPPINES</option>
+                            <option value="PN">PITCAIRN</option>
+                            <option value="PL">POLAND</option>
+                            <option value="PT">PORTUGAL</option>
+                            <option value="PR">PUERTO RICO</option>
+                            <option value="QA">QATAR</option>
+                            <option value="RE">REUNION</option>
+                            <option value="RO">ROMANIA</option>
+                            <option value="RU">RUSSIAN FEDERATION</option>
+                            <option value="RW">RWANDA</option>
+                            <option value="BL">SAINT BARTHÃ‰LEMY</option>
+                            <option value="SH">SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA</option>
+                            <option value="KN">SAINT KITTS AND NEVIS</option>
+                            <option value="LC">SAINT LUCIA</option>
+                            <option value="MF">SAINT MARTIN (FRENCH PART)</option>
+                            <option value="PM">SAINT PIERRE AND MIQUELON</option>
+                            <option value="VC">SAINT VINCENT AND THE GRENADINES</option>
+                            <option value="WS">SAMOA</option>
+                            <option value="SM">SAN MARINO</option>
+                            <option value="ST">SAO TOME AND PRINCIPE</option>
+                            <option value="SA">SAUDI ARABIA</option>
+                            <option value="SN">SENEGAL</option>
+                            <option value="RS">SERBIA</option>
+                            <option value="SC">SEYCHELLES</option>
+                            <option value="SL">SIERRA LEONE</option>
+                            <option value="SG">SINGAPORE</option>
+                            <option value="SX">SINT MAARTEN (DUTCH PART)</option>
+                            <option value="SK">SLOVAKIA</option>
+                            <option value="SI">SLOVENIA</option>
+                            <option value="SB">SOLOMON ISLANDS</option>
+                            <option value="SO">SOMALIA</option>
+                            <option value="ZA">SOUTH AFRICA</option>
+                            <option value="GS">SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</option>
+                            <option value="SS">SOUTH SUDAN</option>
+                            <option value="ES">SPAIN</option>
+                            <option value="LK">SRI LANKA</option>
+                            <option value="SD">SUDAN</option>
+                            <option value="SR">SURINAME</option>
+                            <option value="SJ">SVALBARD AND JAN MAYEN</option>
+                            <option value="SZ">SWAZILAND</option>
+                            <option value="SE">SWEDEN</option>
+                            <option value="CH">SWITZERLAND</option>
+                            <option value="SY">SYRIAN ARAB REPUBLIC</option>
+                            <option value="TW">TAIWAN, PROVINCE OF CHINA</option>
+                            <option value="TJ">TAJIKISTAN</option>
+                            <option value="TZ">TANZANIA, UNITED REPUBLIC OF</option>
+                            <option value="TH">THAILAND</option>
+                            <option value="TL">TIMOR-LESTE</option>
+                            <option value="TG">TOGO</option>
+                            <option value="TK">TOKELAU</option>
+                            <option value="TO">TONGA</option>
+                            <option value="TT">TRINIDAD AND TOBAGO</option>
+                            <option value="TN">TUNISIA</option>
+                            <option value="TR">TURKEY</option>
+                            <option value="TM">TURKMENISTAN</option>
+                            <option value="TC">TURKS AND CAICOS ISLANDS</option>
+                            <option value="TV">TUVALU</option>
+                            <option value="UG">UGANDA</option>
+                            <option value="UA">UKRAINE</option>
+                            <option value="AE">UNITED ARAB EMIRATES</option>
+                            <option value="GB">UNITED KINGDOM</option>
+                            <option value="US">UNITED STATES</option>
+                            <option value="UM">UNITED STATES MINOR OUTLYING ISLANDS</option>
+                            <option value="UY">URUGUAY</option>
+                            <option value="UZ">UZBEKISTAN</option>
+                            <option value="VU">VANUATU</option>
+                            <option value="VE">VENEZUELA, BOLIVARIAN REPUBLIC OF</option>
+                            <option value="VN">VIET NAM</option>
+                            <option value="VG">VIRGIN ISLANDS, BRITISH</option>
+                            <option value="VI">VIRGIN ISLANDS, U.S.</option>
+                            <option value="WF">WALLIS AND FUTUNA</option>
+                            <option value="EH">WESTERN SAHARA</option>
+                            <option value="YE">YEMEN</option>
+                            <option value="ZM">ZAMBIA</option>
+                            <option value="ZW">ZIMBABWE</option>
+                        </select>
+                  </form>
+                </li>
 			  </ul>
-			
+			<!--
 			  <ul class="nav navbar-nav pull-right">
 				<li>
 				  <a href="#">Change search <b class="caret"></b></a>
 				</li>
-			  </ul>
+			  </ul>-->
 			</div>
 		  </div>
 		</div>
@@ -60,6 +456,7 @@
 						→ <%= po.content %> ( <em> Role: <%= po.role %> </em> ) <br/>
 					<% }); %>
 				</p>
+                <% if (stats) { %>
 				<h2>Stats:</h2>
 				<table class="table table-bordered">
 					<% _.each(stats, function(stat) { %>
@@ -69,6 +466,8 @@
 						</tr>
 					<% }); %>
 				</table>
+                <% } %>
+                <% if (results.length>0) { %>
 				<h2>Results:</h2>
 				<table class="table table-bordered">
                     <thead>
@@ -92,6 +491,8 @@
 					<% }); %>
                     </tbody>
 				</table>
+                <% } %>
+                <% if (documents.length>0) { %>
 				<h2>Documents:</h2>
 				<table class="table table-bordered">
                     <thead>
@@ -109,6 +510,7 @@
 					<% }); %>
                     </tbody>
 				</table>
+                <% } %>
 			</script>
 		</div>
 
