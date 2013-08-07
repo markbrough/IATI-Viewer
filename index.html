@@ -71,9 +71,18 @@
 				</table>
 				<h2>Results:</h2>
 				<table class="table table-bordered">
+                    <thead>
+                        <th>Name</th>
+                        <th>Target</th>
+                        <th>Actual</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
 					<% _.each(results, function(result) { %>
 						<tr>
 							<td><%=result.title%></td>
+                            <td><%=result.target%></td>
+                            <td><%=result.actual%></td>                    
 							<td width="50%">
                               <div class="progress">
                                 <div class="progress-bar" style="width: <%=result.value%>%;"></div>
@@ -81,6 +90,7 @@
                             </td>
 						</tr>
 					<% }); %>
+                    </tbody>
 				</table>
 			</script>
 		</div>

@@ -89,6 +89,8 @@ define(function(require) {
                 if (parseInt(num_pixels)){                     
                     out.push({
                     'title': result.indicator.title,
+                    'target': target_val,
+                    'actual': actual_val,
                     'value': num_pixels
                     })
                 }
