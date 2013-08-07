@@ -49,7 +49,8 @@ define(function(require) {
 						})) + ' ' + this.getCurrency() 
 					}
 				],
-                results: this.getResults()
+                results: this.getResults(),
+                documents: this.getDocuments()
 			}) );
 			this.doTransactionChart();
 		},
@@ -96,10 +97,30 @@ define(function(require) {
                 }
 
             });
-            console.warn(out);
             return out;
         },
+        getDocuments: function(){
+            var out = new Array();
+            var documents=this.activity["document-link"];
+            $.each(documents, function(key, document){
+                var category = document.category.content ? document.category.content : '[Unknown]';
+                var category_code = document.category.code ? document.category.code : '[Unknown]';
+                var format = document.format ? document.format : '[Unknown]';
+                var title = document.title.content ? document.title.content : '[Unknown]';
+                var url = document.url ? document.url: '';
 
+                out.push({
+                'category': category,
+                'category_code': category_code,
+                'format': format,
+                'title': title,
+                'url': url
+                })
+
+            });
+            return out;
+            
+        },
 		doTransactionChart: function() {
 
 			var transactions = this.activity.transaction;

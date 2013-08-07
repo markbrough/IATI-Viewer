@@ -92,6 +92,23 @@
 					<% }); %>
                     </tbody>
 				</table>
+				<h2>Documents:</h2>
+				<table class="table table-bordered">
+                    <thead>
+                        <th>Document</th>
+                        <th>Category</th>
+                        <th>Format</th>
+                    </thead>
+                    <tbody>
+					<% _.each(documents, function(document) { %>
+						<tr>
+							<td><a href="<%=document.url%>"><%=document.title%></a></td>
+                            <td><%=document.category%> (<%=document.category_code%>)</td>
+                            <td><%=document.format%></td>  
+						</tr>
+					<% }); %>
+                    </tbody>
+				</table>
 			</script>
 		</div>
 
