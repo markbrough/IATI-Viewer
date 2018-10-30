@@ -33,7 +33,7 @@ define(function(require) {
 				dataType: 'jsonp',
 				data: {
 					q: QUERY({
-						iatiUrl: 'http://iati-datastore.herokuapp.com/api/1/access/activity.xml?limit=2'+reporting_org+recipient_country+offset
+						iatiUrl: 'http://datastore.iatistandard.org/api/1/access/activity.xml?limit=2'+reporting_org+recipient_country+offset
 					}),
 					format: 'json',
 					diagnostics: true,
@@ -52,7 +52,7 @@ define(function(require) {
 
 			});
 
-            $("#csv_download").attr('href', 'http://iati-datastore.herokuapp.com/api/1/access/activity.csv?limit=1000'+reporting_org+recipient_country+offset);
+            $("#csv_download").attr('href', 'http://datastore.iatistandard.org/api/1/access/activity.csv?limit=1000'+reporting_org+recipient_country+offset);
 
 		},
         update: function (args){
